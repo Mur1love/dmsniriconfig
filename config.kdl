@@ -40,14 +40,15 @@ input {
 // Remember to uncomment the node by removing "/-"!
 
 
-/-output "eDP-1" {
-    off
+output "eDP-1" {
+    mode "1366x768@60"
 }
 
 output "HDMI-A-1" {
-    mode "1920x1080@120"
+    mode "1920x1080@60"
     focus-at-startup
 }
+
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
@@ -126,7 +127,7 @@ hotkey-overlay {
     skip-at-startup
 }
 prefer-no-csd
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+screenshot-path "~/Imagens/Capturas de tela/Screenshot from %Y-%m-%d %H-%M-%S.png"
 animations {
     workspace-switch {
         spring damping-ratio=0.85 stiffness=523 epsilon=0.0001
@@ -176,6 +177,12 @@ window-rule {
     match app-id=r#"io.github.efogdev.mpris-timer"#
     open-floating true
 }
+
+window-rule {
+    match app-id="com.gabm.satty"
+    open-floating true
+}
+
 
 window-rule {
     match app-id=r#"^org\.gnome\."#
