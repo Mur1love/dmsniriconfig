@@ -1,4 +1,5 @@
 binds {
+    Alt+C { spawn "dms" "color" "pick" "-a"; }
     Ctrl+Alt+Delete hotkey-overlay-title="Task Manager" { spawn "dms" "ipc" "call" "processlist" "focusOrToggle"; }
     Ctrl+Shift+Escape hotkey-overlay-title="Power Menu: Toggle" { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
     Mod+Alt+L hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
@@ -117,15 +118,14 @@ binds {
     Ctrl+Print { screenshot-screen; }
     Ctrl+XF86Launch1 { screenshot-screen; }
     Print { screenshot; }
-
-    Super+Shift+S { spawn "sh" "-c" "grim -g \"$(slurp)\" -t ppm - | flatpak run org.satty.Satty --filename - --output-filename \"/home/mleal/Imagens/Capturas de tela/satty-%Y%m%d-%H%M%S.png\""; }
     Super+S { screenshot; }
-
     XF86Launch1 { screenshot; }
     Super+Shift+P hotkey-overlay-title="Quit Niri" { quit; }
-    Mod+T hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
-    Super+E hotkey-overlay-title="Open File Mangaer" { spawn "nautilus"; }
+    Super+E hotkey-overlay-title="Open File Mangaer" { spawn "thunar"; }
     Super+Return hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
+    Super+Shift+E hotkey-overlay-title="Open Nautilus" { spawn "nautilus"; }
+    Super+Shift+S { spawn "sh" "-c" "grim -g \"$(slurp)\" -t ppm - | flatpak run org.satty.Satty --filename - --output-filename \"/home/mleal/Imagens/Capturas de tela/satty-%Y%m%d-%H%M%S.png\""; }
+    Super+T { spawn "spf"; }
     Mod+D repeat=false { toggle-overview; }
     Mod+Escape { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+Z { show-hotkey-overlay; }

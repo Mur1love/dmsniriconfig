@@ -31,6 +31,9 @@ input {
     }
     trackpoint {
     }
+    tablet {
+        map-to-output "HDMI-A-1"
+    }
 }
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
@@ -39,15 +42,6 @@ input {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
 
-
-output "eDP-1" {
-    mode "1366x768@60"
-}
-
-output "HDMI-A-1" {
-    mode "1920x1080@60"
-    focus-at-startup
-}
 
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
@@ -250,3 +244,15 @@ include "dms/outputs.kdl"
 include "dms/cursor.kdl"
 
 include "dms/windowrules.kdl"
+
+// Output layout: externo (HDMI-A-1) em cima, embutido (eDP-1) embaixo, centralizado
+output "HDMI-A-1" {
+    mode "1920x1080@60"
+    position x=0 y=0
+    focus-at-startup
+}
+
+output "eDP-1" {
+    mode "1366x768@60.059"
+    position x=277 y=1080
+}
