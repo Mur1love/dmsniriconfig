@@ -122,6 +122,8 @@ binds {
     XF86Launch1 { screenshot; }
     Super+Shift+P hotkey-overlay-title="Quit Niri" { quit; }
     Super+E hotkey-overlay-title="Open File Mangaer" { spawn "thunar"; }
+    Super+F1 hotkey-overlay-title="Mirror eDP-1" { spawn "wl-mirror" "eDP-1"; }
+    Super+F2 hotkey-overlay-title="Stop Mirrors" { spawn "killall" "wl-mirror"; }
     Super+Return hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
     Super+Shift+E hotkey-overlay-title="Open Nautilus" { spawn "nautilus"; }
     Super+Shift+S { spawn "sh" "-c" "grim -g \"$(slurp)\" -t ppm - | flatpak run org.satty.Satty --filename - --output-filename \"/home/mleal/Imagens/Capturas de tela/satty-%Y%m%d-%H%M%S.png\""; }
